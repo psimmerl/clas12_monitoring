@@ -1,0 +1,2 @@
+/volatile/clas12/rg-a/production/recon/pass0/calib/v2.2.15/mon/recon/004801/ 
+/volatile/clas12/rg-a/production/recon/pass0/calib/v2.2.15/mon/recon/004802/
