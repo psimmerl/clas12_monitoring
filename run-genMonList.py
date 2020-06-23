@@ -25,6 +25,8 @@ runs=[]
 #directory_with_runs = "/volatile/clas12/rg-a/production/recon/pass0/calib/v2.2.15/mon/recon/"#"/volatile/clas12/rg-a/production/recon/pass0/calib/v2.2.1/mon/recon/"
 runs = [x[0][-4:] for x in os.walk(inputDir)]  #directory_with_runs)]
 
+run_list = open("run_list.txt", "w+")
+
 for r in runs:
 
     #generate histogram folders for each run if they do not already exist
@@ -47,6 +49,7 @@ for r in runs:
             temp_file_list = glob.glob(os.path.join(inputDir+'00'+r,"*.hipo"))
             temp_file_list.sort(key=lambda f: int(filter(str.isdigit, os.path.basename(f))))
             print(temp_file_list)
+            run_list.write("%s\n" % r)
             for f in temp_file_list:
                 if f_counter < 900:
                     file_list.write(f+'\n')
@@ -57,4 +60,5 @@ for r in runs:
         file_list.close()
     
 
+run_list.close()
 print "complete"

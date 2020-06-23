@@ -89,7 +89,7 @@ for j in range(0,n_jobs):
     jsub_script.write(temp_file_list_to_process_dir+"fl_r"+str(run)+"_set"+str(j)+".txt" + " \n")
 
     for java_class in jc_list:
-        jsub_script.write("out/"+ java_class[:-1]+" \n")#"/w/hallb-scifs17exp/clas12/rg-a/software/clas12_monitoring/" + java_class[:-1] + " \n" )    
+        jsub_script.write("./"+ java_class[:-1]+" \n")#"/w/hallb-scifs17exp/clas12/rg-a/software/clas12_monitoring/" + java_class[:-1] + " \n" )    
     
     for out_hipo_file in output_hipo_list:
         jsub_script.write("OUTPUT_DATA: plots" +str(run) +"/" + out_hipo_file[:-1] + " \n") # the [:-1] is because the txt has a new line character that I want to remove 
