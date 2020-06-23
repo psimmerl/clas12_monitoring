@@ -29,7 +29,7 @@ python run-submit.py run_list.txt
 echo "Finished run-submit"
 
 
-squeue | grep psimmerl
+#watch squeue -u psimmerl
 
 
 
